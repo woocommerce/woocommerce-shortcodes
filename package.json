@@ -1,0 +1,17 @@
+{
+  "name": "woocommerce-shortcodes",
+  "description": "WooCommerce Shortcodes",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-sass": "^0.7.3"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.1.0"
+  }
+}
