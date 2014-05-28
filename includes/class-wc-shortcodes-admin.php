@@ -39,7 +39,7 @@ class WC_Shortcodes_Admin {
 	 * @return array
 	 */
 	public function add_tinymce_locales( $locales ) {
-		$locales['woocommerce_shortcodes_button'] = plugin_dir_path( __FILE__ ) . 'wc-shortcodes-editor-i18n.php';
+		$locales['woocommerce_shortcodes'] = plugin_dir_path( __FILE__ ) . 'wc-shortcodes-editor-i18n.php';
 
 		return $locales;
 	}
@@ -51,7 +51,7 @@ class WC_Shortcodes_Admin {
 	 * @return array
 	 */
 	public function register_shortcode_button( $buttons ) {
-		array_push( $buttons, '|', 'woocommerce_shortcodes_button' );
+		array_push( $buttons, '|', 'woocommerce_shortcodes' );
 
 		return $buttons;
 	}
@@ -66,7 +66,7 @@ class WC_Shortcodes_Admin {
 	public function add_shortcode_tinymce_plugin( $plugins ) {
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		$plugins['woocommerce_shortcodes_button'] = plugins_url( 'assets/js/editor' . $suffix . '.js', plugin_dir_path( __FILE__ ) );
+		$plugins['woocommerce_shortcodes'] = plugins_url( 'assets/js/editor' . $suffix . '.js', plugin_dir_path( __FILE__ ) );
 
 		return $plugins;
 	}
