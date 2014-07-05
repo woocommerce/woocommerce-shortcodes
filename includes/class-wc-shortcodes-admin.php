@@ -15,6 +15,7 @@ class WC_Shortcodes_Admin {
 		add_action( 'admin_head', array( $this, 'add_shortcode_button' ) );
 		add_filter( 'tiny_mce_version', array( $this, 'refresh_mce' ) );
 		add_filter( 'mce_external_languages', array( $this, 'add_tinymce_locales' ), 20, 1 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 	}
 
 	/**
@@ -84,6 +85,18 @@ class WC_Shortcodes_Admin {
 		return $version;
 	}
 
+	/**
+	 * Admin scripts.
+	 *
+	 * @param  string $hook Page slug.
+	 *
+	 * @return void
+	 */
+	public function admin_scripts( $hook ) {
+		if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
+			wp_enqueue_style( 'woocommerce-shortcodes', plugins_url( 'assets/css/editor.css', plugin_dir_path( __FILE__ ) ), array(), WooCommerce_Shortcodes::VERSION, 'all' );
+		}
+	}
 }
 
 new WC_Shortcodes_Admin();

@@ -24,7 +24,7 @@
 		var ed = tinymce.activeEditor;
 		editor.addButton( 'woocommerce_shortcodes', {
 			text: ed.getLang( 'woocommerce_shortcodes.shortcode_title' ),
-			icon: false,
+			icon: 'woocommerce-shortcodes',
 			type: 'menubutton',
 			menu: [
 				{
