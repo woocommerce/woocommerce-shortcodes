@@ -46,6 +46,9 @@ module.exports = function( grunt ){
 		// Compile all .scss files.
 		sass: {
 			compile: {
+				options: {
+					style: 'compressed'
+				},
 				files: [{
 					expand: true,
 					cwd: '<%= dirs.css %>/',
