@@ -94,7 +94,7 @@ class WC_Shortcodes_Admin {
 	 */
 	public function admin_scripts( $hook ) {
 		if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
-			wp_enqueue_style( 'woocommerce-shortcodes', plugins_url( 'assets/css/editor.css', plugin_dir_path( __FILE__ ) ), array(), WooCommerce_Shortcodes::VERSION, 'all' );
+			wp_enqueue_style( 'woocommerce-shortcodes', plugins_url( 'assets/css/editor.css', plugin_dir_path( __FILE__ ) ), array( 'woocommerce_admin_menu_styles' ), WooCommerce_Shortcodes::VERSION, 'all' );
 		}
 	}
 }
