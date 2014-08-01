@@ -21,6 +21,10 @@ Starting WooCommerce 2.2, this TinyMCE button will no longer be part of WooComme
 * WordPress 3.9 or later.
 * WooCommerce 2.2 or later.
 
+= Contribute =
+
+You can contribute to the source code in our [GitHub](https://github.com/woothemes/woocommerce-shortcodes/) page.
+
 == Installation ==
 
 * Upload plugin files to your plugins folder, or install using WordPress built-in Add New Plugin installer;
@@ -58,3 +62,5 @@ Starting WooCommerce 2.2, this TinyMCE button will no longer be part of WooComme
 == Upgrade Notice ==
 
 = 1.0.0 =
+
+* Initial version.
